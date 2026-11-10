@@ -1,0 +1,16 @@
+[
+  {
+    "figure": "fig01_overview",
+    "source": "manuscript/figures/fig01_overview.pdf",
+    "source_sha256": "c6dafdee2350ff0c6f425e5d5d7ef4bcf45e300273b6ddbfc7ee3d40a300a407",
+    "published_pdf_sha256": "dc93126fa24b27914aee47159020d5e9515eac8c635905dc45d32d9eeee57ccc",
+    "change": "Metadata cleared; rendered figure content identical."
+  },
+  {
+    "figure": "fig09_cross_target",
+    "source": "manuscript/figures/fig09_cross_target.pdf",
+    "source_sha256": "833ee83b64138f09fe93cce2b42a97c37d043192d740057fd759537054b57a59",
+    "published_pdf_sha256": "83075d972170692edefabacf36bc74a079d342971a747d1ae838a121c1a5c1fa",
+    "change": "Metadata cleared; rendered figure content identical."
+  }
+]

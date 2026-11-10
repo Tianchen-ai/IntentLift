@@ -8,26 +8,16 @@ The reusable object is the **algorithm and its semantic boundaries**: iteration,
 
 [Quick start](#quick-start) · [Architecture](docs/architecture.md) · [Running recovery](docs/workflows.md) · [Paper results](paper/README.md) · [Source provenance](docs/provenance.md)
 
-```mermaid
-flowchart LR
-    S[Optimized source kernel] --> L[LLM-assisted recovery]
-    L --> J[Executable algorithm]
-    J --> V[Replay + structural and execution checks]
-    S --> V
-    V --> A[Accepted algorithm]
-    A --> M[Intent MLIR]
-    M --> C[Compiler transformations]
-    C --> GPU[NVIDIA GPU]
-    C --> RVV[RISC-V Vector]
-    C --> CPU[CPU reference]
-```
+<img src="paper/figures/fig01_overview.png" alt="IntentLift overview, reproduced from the paper" width="720">
+
+*Overview from the paper.* [Vector PDF](paper/figures/fig01_overview.pdf)
 
 ## What is included
 
 - **Recovery and checking:** source adapters, typed algorithm records, source-isolated Replay, compiler-observation comparison (Gate 1), and execution comparison (Gate 2).
 - **Intent MLIR compiler:** the `intent` dialect, deterministic materialization from the algorithm, structural transformations, and CUDA / RISC-V Vector (RVV) target paths.
 - **A runnable saved example:** compile the recovered SwiGLU algorithm through Intent MLIR and LLVM, then compare native CPU execution with its mathematical expression. No model credentials or GPU are needed for this example.
-- **Paper results:** frozen CSV inputs, a reproducible summary plot, and provenance hashes. These are the existing paper measurements, not a new benchmark run of this checkout.
+- **Paper results:** original manuscript figures, frozen CSV inputs, and provenance hashes. These are the existing paper measurements, not a new benchmark run of this checkout.
 
 The project is named **IntentLift**; `intentir` remains the Python import namespace, and **Intent MLIR** names the compiler representation. This repository contains our dialect and passes, not a vendored copy of LLVM/MLIR.
 
@@ -66,9 +56,11 @@ The example writes `output/swiglu/intent.mlir`, runs the native CPU implementati
 | Algorithm-mutation study | **250 / 250** | Activated mutations rejected by the combined checks |
 | Frontend extension | **112 vs. 1,243 SLoC** | Marginal code for 12 extension groups, at equal detection |
 
-<img src="paper/figures/gpu_speedups.png" alt="Per-kernel speedup over original Triton on RTX 5090 D and H100" width="100%">
+<img src="paper/figures/fig09_cross_target.png" alt="Original paper figure comparing target implementations across RTX 5090 D, H100, and RVV" width="100%">
 
-Speedup is **baseline latency / IntentLift latency**; larger is better. The [results guide](paper/README.md) gives the complete mutation-study counts, baseline definitions, workload limits, and the distinction between marginal and total implementation size. Exact CSV fields and published aggregate values are preserved.
+*Cross-target evaluation figure from the paper.* [Vector PDF](paper/figures/fig09_cross_target.pdf)
+
+The figure retains the paper's axis: **latency / IntentLift latency**, with lower values indicating lower latency and IntentLift normalized to 1. The table above reports baseline / IntentLift speedups. The [results guide](paper/README.md) gives the complete mutation-study counts, baseline definitions, workload limits, and the distinction between marginal and total implementation size. Exact CSV fields and published aggregate values are preserved.
 
 ## Repository map
 
@@ -79,7 +71,7 @@ Speedup is **baseline latency / IntentLift latency**; larger is better. The [res
 | [`python/intentir`](python/intentir) | Recovery, algorithm contracts, Gate 1 / Gate 2, and backend orchestration |
 | [`tools`](tools) | Compiler driver and recovery / benchmark command-line entry points |
 | [`examples/swiglu`](examples/swiglu) | Saved algorithm, acceptance summary, and native compilation example |
-| [`paper`](paper) | Frozen result tables and plot regeneration |
+| [`paper`](paper) | Original manuscript figures, preview rendering, and frozen result tables |
 | [`docs`](docs) | Architecture, setup, workflows, and provenance |
 | [`spec/lowering`](spec/lowering) | Workload and measurement specifications |
 

@@ -2,6 +2,17 @@
 
 These tables are frozen inputs used by the paper's plots. No recovery or performance campaign was rerun to populate this repository. `data-manifest.json` provides source-relative paths, hashes, row counts, and any removed columns.
 
+## Original paper figures
+
+The repository displays the paper's original [overview](figures/fig01_overview.pdf) and [cross-target evaluation figure](figures/fig09_cross_target.pdf). The PDF graphics are unchanged; document metadata was cleared before publication. PNG files are direct renderings of those PDFs, not redesigned plots. `figures/provenance.json` records the source and published PDF hashes.
+
+```bash
+python -m pip install pymupdf
+python paper/render_figures.py
+```
+
+This regenerates the README previews from the supplied PDFs. The evaluation figure retains the paper's normalization, latency / IntentLift latency, with lower values indicating lower latency. It includes both GPU and RVV panels.
+
 ## GPU performance
 
 `gpu_24_per_kernel.csv` contains the same 24 kernels on RTX 5090 D and H100 80GB HBM3. `gpu_24_aggregate.csv` preserves the reported geometric means: **1.305×** and **1.440×** over the original Triton implementations, respectively. IntentLift is no slower than the source in 23 of 24 cases on each device.
@@ -15,13 +26,6 @@ Original field names are retained for traceability:
 | `*_g_lowering` | Schedule-search latency / structurally optimized latency |
 
 `full` in these historical CSV fields means the IntentLift configuration with both schedule search and structural lowering. Per-kernel values are rounded, so recomputing a geometric mean from them may differ slightly from the original aggregate.
-
-```bash
-python -m pip install matplotlib
-python paper/plot_results.py
-```
-
-This regenerates `figures/gpu_speedups.png` and `.svg` directly from the CSV. It does not run kernels or modify the data.
 
 ## SG2044 RVV attention forward
 

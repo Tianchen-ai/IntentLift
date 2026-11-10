@@ -30,11 +30,11 @@ To inspect only materialization, without the native toolchain:
 python examples/swiglu/run.py --emit-only
 ```
 
-To regenerate the README plot:
+To render the original paper figures for the README:
 
 ```bash
-python -m pip install matplotlib
-python paper/plot_results.py
+python -m pip install pymupdf
+python paper/render_figures.py
 ```
 
 ## Fresh recovery and target execution
