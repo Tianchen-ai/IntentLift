@@ -1,0 +1,49 @@
+{
+  "origin": "Frozen paper plotting inputs; no measurements rerun for this publication.",
+  "paper_source_commit": "9d40985",
+  "files": [
+    {
+      "file": "data/gpu_24_per_kernel.csv",
+      "source": "figures/fig09_cross_target/final/data/gpu_24_per_kernel.csv",
+      "source_sha256": "6ebbb62c63721d3cc8b8ee606c25a2304aaeb56564daabe6fc2c6837a41fffd3",
+      "published_sha256": "6ebbb62c63721d3cc8b8ee606c25a2304aaeb56564daabe6fc2c6837a41fffd3",
+      "removed_columns": [],
+      "rows": 24
+    },
+    {
+      "file": "data/gpu_24_aggregate.csv",
+      "source": "evidence/experiment3_targets/data/backend_j_consumption_24/gpu_24_aggregate.csv",
+      "source_sha256": "057e823c01fb46ac33cbcc61c643f1771628b8b03bda3e909c6674100b535a2d",
+      "published_sha256": "057e823c01fb46ac33cbcc61c643f1771628b8b03bda3e909c6674100b535a2d",
+      "removed_columns": [],
+      "rows": 2
+    },
+    {
+      "file": "data/rvv_flash_attention_forward.csv",
+      "source": "figures/fig09_cross_target/final/data/rvv_flash_attention_forward.csv",
+      "source_sha256": "2fba0cc58e54d7b0b4527086bc14759a93fc73d026a001bda22dccf0739b88ba",
+      "published_sha256": "2fba0cc58e54d7b0b4527086bc14759a93fc73d026a001bda22dccf0739b88ba",
+      "removed_columns": [],
+      "rows": 1
+    },
+    {
+      "file": "data/frontend_extension_cost.csv",
+      "source": "figures/fig08_frontend_verification/final/data.csv",
+      "source_sha256": "9799ecaef43affd0326e48abf7750478d3deafe13cb946a7a1268ba929bfaaa4",
+      "published_sha256": "9799ecaef43affd0326e48abf7750478d3deafe13cb946a7a1268ba929bfaaa4",
+      "removed_columns": [],
+      "rows": 4
+    },
+    {
+      "file": "data/j_mutations.csv",
+      "source": "figures/fig06_scrc_chain/final/data.csv",
+      "source_sha256": "146626472bc7653d8ba1346f982fe6319dcf20d508af4e7f616224ac62859f46",
+      "published_sha256": "af05b908dc9c313288bcc8fbccd1c8eecacc93699138851e35fa4a243d2322ae",
+      "removed_columns": [
+        "artifact",
+        "output_dir"
+      ],
+      "rows": 300
+    }
+  ]
+}

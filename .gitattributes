@@ -1,0 +1,3 @@
+# Keep original CSV line endings / hashes and generated SVG path formatting.
+paper/data/*.csv -text whitespace=cr-at-eol
+paper/figures/*.svg -whitespace

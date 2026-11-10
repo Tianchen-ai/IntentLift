@@ -1,0 +1,13 @@
+{
+  "description": "Historical accepted SwiGLU closure from upstream PR #2; summary fields copied from saved receipts. The public demo recompiles J, without performing fresh Lift/Replay/Gates.",
+  "upstream_commit": "bc182c422ebaa0c02563736d123d5406c6144888",
+  "artifact_sha256": "a3825e5ff64f6ad648520c5894f851a377d086b22f42afb6f747a5ace39796ed",
+  "gate1_status": "replay_closed",
+  "gate2_passed": true,
+  "gate2_case_count": 1,
+  "gate2_failed_case_ids": [],
+  "receipt_sha256": {
+    "attempt-02/gate1.json": "4b2c3d43090fcba560f9b48c18069d3fe035990aa4d4eb87737a176502c00e55",
+    "gate2.json": "6ccf2522d44b0d4bd863c0e0c505bb2840490b3b6f446d6028939fb1d9caa209"
+  }
+}

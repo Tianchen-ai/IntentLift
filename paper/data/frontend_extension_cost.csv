@@ -1,0 +1,5 @@
+component,intentlift_sloc,hybrid_tv12_sloc,accounting
+marginal_12_groups,112,1243,included in marginal comparison
+validator_infrastructure,0,1775,shown separately
+shared_frontend_observation_excluded,623,623,excluded from both
+from_zero_total,2311,3018,full validator footprint

@@ -1,0 +1,25 @@
+kernel_index,kernel,rtx5090_g_schedule,rtx5090_g_lowering,rtx5090_source_over_full,h100_g_schedule,h100_g_lowering,h100_source_over_full,data_status
+1,SwiGLU,1.054,1.000,1.021,1.124,1.013,1.024,measured_rounded
+2,RMSNorm,1.000,1.008,1.295,1.021,1.012,1.517,measured_rounded
+3,Fused Add RMSNorm,1.013,1.013,1.182,1.019,1.002,1.346,measured_rounded
+4,GeGLU,1.062,1.000,1.022,1.204,1.000,1.084,measured_rounded
+5,LayerNorm,1.000,1.000,1.122,1.000,1.029,1.301,measured_rounded
+6,Softmax,1.076,1.023,1.259,1.050,1.058,1.336,measured_rounded
+7,DYT,1.077,1.002,1.136,1.212,1.000,1.199,measured_rounded
+8,Sparsemax,1.075,1.489,1.741,1.100,1.503,1.784,measured_rounded
+9,KLDiv,1.006,1.035,1.196,1.021,1.002,1.251,measured_rounded
+10,PolyNorm,1.000,1.013,1.239,1.044,1.043,1.428,measured_rounded
+11,JSD,1.002,1.002,1.084,1.000,1.054,1.607,measured_rounded
+12,TVD,1.034,1.006,1.110,1.020,1.004,1.166,measured_rounded
+13,xFormers RMSNorm,5.178,1.009,1.063,6.394,1.007,1.205,measured_rounded
+14,xFormers RMSNorm-add,4.402,1.000,1.047,5.259,1.014,1.085,measured_rounded
+15,Flash backward preprocess,1.362,1.609,1.073,1.000,5.399,1.050,measured_rounded
+16,CrossEntropy,1.400,1.000,2.479,1.235,1.000,2.777,measured_rounded
+17,GroupNorm,1.000,1.020,2.011,1.002,1.014,2.293,measured_rounded
+18,Flash one-pass LayerNorm,1.008,1.019,1.187,1.107,1.023,1.424,measured_rounded
+19,Liger RoPE,1.346,1.000,1.333,2.086,1.000,1.262,measured_rounded
+20,Qwen2VL MRoPE,1.291,1.000,1.158,1.881,1.000,0.911,measured_rounded
+21,Flash Linear,1.574,1.072,1.365,1.412,1.731,1.648,measured_rounded
+22,SplitK reduce,1.018,1.004,2.914,1.010,1.089,3.470,measured_rounded
+23,Llama4 RoPE,1.442,1.000,1.729,2.031,1.146,2.350,measured_rounded
+24,FlashAttention forward,1.059,1.172,0.995,1.047,2.862,1.166,measured_rounded_search_phase

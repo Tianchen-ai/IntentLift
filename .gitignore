@@ -1,0 +1,30 @@
+# Build
+/build/
+/output/
+/.local/
+/tmp/
+*.o
+*.a
+
+# Secrets / local config
+llm_providers.local.json
+.env
+.env.*
+*.pem
+*.key
+/local/
+
+# Generated closure / benchmark evidence
+/artifacts/
+/results/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+/.pytest_cache/
+
+# Dataset (lives outside repo)
+/Dataset/
+scratchpad/
